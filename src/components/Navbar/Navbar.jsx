@@ -17,12 +17,14 @@ const Navbar = () => {
 
     return (
        <nav>
-        <div className="block md:hidden" onClick={() => setOpen(!open)}>
+        <div className="block md:hidden bg-yellow-300 p-3" onClick={() => setOpen(!open)}>
     {
-        open === true ? <IoMdClose /> : <CiMenuBurger className="text-3xl" />
+        open === true ? <IoMdClose className="text-3xl" /> : <CiMenuBurger className="text-3xl" />
     }
 </div>
-        <ul className="md:flex items-center justify-center py-3">
+        <ul className={`md:flex absolute duration-1000 bg-yellow-200 px-3
+            ${open ? 'top-14' : '-top-48'}
+            md:static`}>
         {
             routes.map(route => <Link key={route.path} 
                 route={route} ></Link>)
