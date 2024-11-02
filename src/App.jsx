@@ -1,10 +1,10 @@
-// import DaisyNav from "./components/DaisyNav/DaisyNav";
-import Navbar from "./components/Navbar/Navbar";
+import React from "react";
+import Lchart from "./components/LineChart/Lchart";
+
 const App = () => {
   return (
     <div>
-      {/* <DaisyNav></DaisyNav> */}
-      <Navbar></Navbar>
+      <Lchart />
     </div>
   );
 };
